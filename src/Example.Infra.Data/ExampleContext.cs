@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Example.Domain.CitizenAggregate;
+using Example.Domain.CityAggregate;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.Extensions.Configuration;
 
 namespace Example.Infra.Data
 {
@@ -13,6 +14,8 @@ namespace Example.Infra.Data
     public class ExampleContext : DbContext
     {
         public DbSet<Domain.ExampleAggregate.Example> Example { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Citizen> Citizens { get; set; }
         public ExampleContext(DbContextOptions options) : base(options)
         {
         }
