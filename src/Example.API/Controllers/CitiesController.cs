@@ -29,7 +29,7 @@ namespace Example.API.Controllers
             }
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> Get(int id)
         {
             try
@@ -65,7 +65,7 @@ namespace Example.API.Controllers
             }
         }
 
-        [HttpPut("{id")]
+        [HttpPut("{id:int")]
         public async Task<IActionResult> Put(int id, [FromBody] UpdateCityRequest request)
         {
             try
@@ -83,7 +83,7 @@ namespace Example.API.Controllers
             }
         }
 
-        [HttpDelete("{id")]
+        [HttpDelete("{id:int")]
         public async Task<IActionResult> Delete(int id)
         {
             try

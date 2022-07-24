@@ -21,7 +21,7 @@ namespace Example.Application.CitizenService.Models.Dtos
         [Display(Name = "Citizen name")]
         [StringLength(64, ErrorMessage = "Invalid name")]
         public string Name { get; set; }
-        public Cpf Cpf { get; set; }
+        public string Cpf { get; set; }
 
         [Required(ErrorMessage = "Citizen name must be informed")]
         [Display(Name = "Citizen age")]

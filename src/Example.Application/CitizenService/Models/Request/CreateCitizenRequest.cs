@@ -6,7 +6,7 @@ namespace Example.Application.CitizenService.Models.Request
     {
         public string Name { get; set; }
         public int Age { get; set; }
-        public Cpf Cpf { get; set; }
+        public string Cpf { get; set; }
         public int CityId { get; set; }
     }
 }

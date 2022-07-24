@@ -13,12 +13,12 @@ namespace Example.Domain.CitizenAggregate
 
         public int Id { get; private set; }
         public string Name { get; private set; }
-        public Cpf Cpf { get; private init; }
+        public string Cpf { get; private init; }
         public int Age { get; private set; }
         public int CityId { get; private set; }
         public City City { get; private set; }
 
-        public static Citizen Create(string name, Cpf cpf, int age, int cityId)
+        public static Citizen Create(string name, string cpf, int age, int cityId)
         {
             ArgumentNullException.ThrowIfNull(name);
             ArgumentNullException.ThrowIfNull(cpf);

@@ -2,19 +2,19 @@
 {
     public class Cpf
     {
-        public string Value { get; }
+        public Int64 Value { get; }
 
-        private Cpf(string value)
+        public Cpf(Int64 value)
         {
             Value = value;
         }
 
-        public static Cpf Create(string value)
+        public static Cpf Create(Int64 value)
         {
-            if (string.IsNullOrWhiteSpace(value))
+            if (value == 0)
                 throw new ArgumentException("CPF can't be null or empty");
 
-            if (value.Length != 11)
+            if (value != 11)
                 throw new ArgumentException("CPF must have length equal to 11");
 
             return new Cpf(value);
